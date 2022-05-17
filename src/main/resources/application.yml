@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: name_db
+    password: password_db
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    change-log: db/changelog/migration.sql
+    enabled: true
+
+  h2:
+    console:
+      enabled: true
